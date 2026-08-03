@@ -20,7 +20,7 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@countries": ["../main/countries.ts"]
+      "@countries": ["./src/lib/countries.ts"]
     }
   },
   "include": [
