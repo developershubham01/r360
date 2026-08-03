@@ -1,8 +1,8 @@
 # FloUI
 
-**Frontend for FloCafe POS** — a Next.js 16 + React 19 application with Tailwind CSS v4 and shadcn/ui components.
+**Frontend for Restaurant360 POS** — a Next.js 16 + React 19 application with Tailwind CSS v4 and shadcn/ui components.
 
-FloUI is the user interface for the FloCafe point-of-sale system. It runs as a static export inside Electron and communicates with the local Express backend (`:3001`) and KDS server (`:3002`).
+FloUI is the user interface for the Restaurant360 point-of-sale system. It runs as a static export inside Electron and communicates with the local Express backend (`:3001`) and KDS server (`:3002`).
 
 ## Features
 
@@ -105,7 +105,7 @@ src/
 
 ## API Communication
 
-FloUI communicates with the FloCafe backend via Axios:
+FloUI communicates with the Restaurant360 backend via Axios:
 
 ```typescript
 import api from '@/lib/api';
@@ -129,9 +129,9 @@ Uses Zustand for global state:
 - **held-orders.ts** — Suspended/held orders
 - **pos-settings.ts** — POS configuration from backend
 
-## Integration with FloCafe
+## Integration with Restaurant360
 
-FloUI is included directly in the FloCafe repo:
+FloUI is included directly in the Restaurant360 repo:
 
 ```bash
 npm run build:frontend  # Builds static export to frontend/out/
@@ -149,4 +149,4 @@ The static export is served by the Electron main process.
 
 ## License
 
-MIT License — see [FloCafe License](https://github.com/FreeOpenSourcePOS/FloCafe/blob/main/license_instructions.md)
+MIT License — see [Restaurant360 License](https://github.com/FreeOpenSourcePOS/Restaurant360/blob/main/license_instructions.md)

@@ -34,7 +34,7 @@ Restaurant360 runs entirely on your own machine — no internet, no subscription
 - [Contributing](#contributing)
 - [License](#license)
 
-## Why FloCafe
+## Why Restaurant360
 
 | | |
 |---|---|
@@ -57,7 +57,7 @@ Restaurant360 runs entirely on your own machine — no internet, no subscription
   </a>
 </p>
 
-Or grab the latest build directly from [Releases](https://github.com/FreeOpenSourcePOS/FloCafe/releases) — always the top-most release, filenames are versioned (e.g. `Flo.Cafe-<version>.dmg`):
+Or grab the latest build directly from [Releases](https://github.com/FreeOpenSourcePOS/Restaurant360/releases) — always the top-most release, filenames are versioned (e.g. `Flo.Cafe-<version>.dmg`):
 
 | Platform | Asset | Description |
 |----------|------|-------------|
@@ -66,21 +66,21 @@ Or grab the latest build directly from [Releases](https://github.com/FreeOpenSou
 | **macOS (Apple Silicon DMG)** | `Flo.Cafe-<version>-arm64.dmg` | Direct download for M1/M2/M3/M4 |
 | **Windows** | [Microsoft Store](https://apps.microsoft.com/detail/9n1md6585p4q) | Recommended — auto-updates |
 | **Windows (EXE)** | `Flo.Cafe.Setup.<version>.exe` | Direct download installer |
-| **Linux (Snap)** | [`sudo snap install flocafe`](#install-on-linux) | Recommended for Ubuntu, Fedora (via snapd), Mint, elementary — auto-updates via snapd |
-| **Linux (AppImage)** | `flocafe-<version>-x86_64.AppImage` | Portable, glibc ≥ 2.34 (Ubuntu 22.04+, Fedora 36+, Debian 12+) — [install](#install-on-linux) |
-| **Linux (AppImage arm64)** | `flocafe-<version>-arm64.AppImage` | Raspberry Pi 4/5, ARM servers, Apple-Silicon Linux VMs — [install](#install-on-linux) |
-| **Linux (Debian)** | `flocafe_<version>_amd64.deb` | Debian / Ubuntu / Pop!_OS / Mint |
-| **Linux (Debian arm64)** | `flocafe_<version>_arm64.deb` | Same as above on arm64 distros |
+| **Linux (Snap)** | [`sudo snap install restaurant360`](#install-on-linux) | Recommended for Ubuntu, Fedora (via snapd), Mint, elementary — auto-updates via snapd |
+| **Linux (AppImage)** | `restaurant360-<version>-x86_64.AppImage` | Portable, glibc ≥ 2.34 (Ubuntu 22.04+, Fedora 36+, Debian 12+) — [install](#install-on-linux) |
+| **Linux (AppImage arm64)** | `restaurant360-<version>-arm64.AppImage` | Raspberry Pi 4/5, ARM servers, Apple-Silicon Linux VMs — [install](#install-on-linux) |
+| **Linux (Debian)** | `restaurant360_<version>_amd64.deb` | Debian / Ubuntu / Pop!_OS / Mint |
+| **Linux (Debian arm64)** | `restaurant360_<version>_arm64.deb` | Same as above on arm64 distros |
 
-**Uninstalling:** standalone uninstaller scripts for macOS and Windows are attached to every [release](https://github.com/FreeOpenSourcePOS/FloCafe/releases) — useful if the packaged uninstaller is missing or a reinstall needs a clean slate. They always remove the app and its support files; for your database/backups/Master PIN, run interactively and you'll be asked Delete or Keep, or pass `--purge-data` / `-PurgeData` upfront to delete without asking (add `--dry-run` / `-DryRun` to preview first).
+**Uninstalling:** standalone uninstaller scripts for macOS and Windows are attached to every [release](https://github.com/FreeOpenSourcePOS/Restaurant360/releases) — useful if the packaged uninstaller is missing or a reinstall needs a clean slate. They always remove the app and its support files; for your database/backups/Master PIN, run interactively and you'll be asked Delete or Keep, or pass `--purge-data` / `-PurgeData` upfront to delete without asking (add `--dry-run` / `-DryRun` to preview first).
 
 ```sh
 # macOS
-curl -fsSL https://github.com/FreeOpenSourcePOS/FloCafe/releases/latest/download/uninstall-macos.sh -o uninstall-macos.sh && chmod +x uninstall-macos.sh && ./uninstall-macos.sh
+curl -fsSL https://github.com/FreeOpenSourcePOS/Restaurant360/releases/latest/download/uninstall-macos.sh -o uninstall-macos.sh && chmod +x uninstall-macos.sh && ./uninstall-macos.sh
 ```
 ```powershell
 # Windows (PowerShell)
-irm https://github.com/FreeOpenSourcePOS/FloCafe/releases/latest/download/uninstall-windows.ps1 -OutFile uninstall-windows.ps1; powershell -ExecutionPolicy Bypass -File .\uninstall-windows.ps1
+irm https://github.com/FreeOpenSourcePOS/Restaurant360/releases/latest/download/uninstall-windows.ps1 -OutFile uninstall-windows.ps1; powershell -ExecutionPolicy Bypass -File .\uninstall-windows.ps1
 ```
 
 ## Install on Linux
@@ -90,31 +90,31 @@ Three official channels: Snap (auto-updates), AppImage (any distro, no install),
 ### Snap
 
 ```bash
-sudo snap install flocafe
+sudo snap install restaurant360
 ```
 
-Stable channel is `latest/stable`; pre-releases are on `edge` (`sudo snap install flocafe --edge`). Auto-update is on by default — every new tag from this repo lands on `latest/stable` automatically. To pin a specific version: `sudo snap refresh flocafe --channel=2.0.5/stable`.
+Stable channel is `latest/stable`; pre-releases are on `edge` (`sudo snap install restaurant360 --edge`). Auto-update is on by default — every new tag from this repo lands on `latest/stable` automatically. To pin a specific version: `sudo snap refresh restaurant360 --channel=2.0.5/stable`.
 
 For tails that need a receipt printer over USB without `sudo`, grant the snap a confined-usb override:
 
 ```bash
-sudo snap connect flocafe:raw-usb
+sudo snap connect restaurant360:raw-usb
 ```
 
 ### AppImage (any distro)
 
-Both architectures are signed and bundled in the latest release's assets. From the [Releases page](https://github.com/FreeOpenSourcePOS/FloCafe/releases), expand `Assets` at the bottom, download the AppImage matching your CPU, then:
+Both architectures are signed and bundled in the latest release's assets. From the [Releases page](https://github.com/FreeOpenSourcePOS/Restaurant360/releases), expand `Assets` at the bottom, download the AppImage matching your CPU, then:
 
 ```bash
 # x86_64 — most desktops, servers, Steam Deck, most VMs
-curl -L -O https://github.com/FreeOpenSourcePOS/FloCafe/releases/latest/download/flocafe-x86_64.AppImage
-chmod +x flocafe-x86_64.AppImage
-./flocafe-x86_64.AppImage
+curl -L -O https://github.com/FreeOpenSourcePOS/Restaurant360/releases/latest/download/restaurant360-x86_64.AppImage
+chmod +x restaurant360-x86_64.AppImage
+./restaurant360-x86_64.AppImage
 
 # arm64 — Raspberry Pi 4/5, ARM servers, Apple-Silicon Linux VMs
-curl -L -O https://github.com/FreeOpenSourcePOS/FloCafe/releases/latest/download/flocafe-arm64.AppImage
-chmod +x flocafe-arm64.AppImage
-./flocafe-arm64.AppImage
+curl -L -O https://github.com/FreeOpenSourcePOS/Restaurant360/releases/latest/download/restaurant360-arm64.AppImage
+chmod +x restaurant360-arm64.AppImage
+./restaurant360-arm64.AppImage
 ```
 
 If the AppImage doesn't launch on an older distro, `sudo apt install libfuse2` first (Ubuntu 22.04 ships libfuse3 by default; earlier releases like 20.04 still need `libfuse2`). Your data lives under `~/.config/flo-desktop` once running.
@@ -123,15 +123,15 @@ If the AppImage doesn't launch on an older distro, `sudo apt install libfuse2` f
 
 ```bash
 # x86_64
-curl -L -O https://github.com/FreeOpenSourcePOS/FloCafe/releases/latest/download/flocafe_amd64.deb
-sudo apt install ./flocafe_amd64.deb
+curl -L -O https://github.com/FreeOpenSourcePOS/Restaurant360/releases/latest/download/restaurant360_amd64.deb
+sudo apt install ./restaurant360_amd64.deb
 
 # arm64 (Raspberry Pi OS arm64, etc.)
-curl -L -O https://github.com/FreeOpenSourcePOS/FloCafe/releases/latest/download/flocafe_arm64.deb
-sudo apt install ./flocafe_arm64.deb
+curl -L -O https://github.com/FreeOpenSourcePOS/Restaurant360/releases/latest/download/restaurant360_arm64.deb
+sudo apt install ./restaurant360_arm64.deb
 ```
 
-Fedora / RHEL / Nobara users: substitute the `.rpm` asset from the same release (filename pattern `flocafe-<version>-<arch>.rpm`) and install with `sudo rpm -i ./flocafe-<arch>.rpm`.
+Fedora / RHEL / Nobara users: substitute the `.rpm` asset from the same release (filename pattern `restaurant360-<version>-<arch>.rpm`) and install with `sudo rpm -i ./restaurant360-<arch>.rpm`.
 
 ## 🚀 Features
 
@@ -195,36 +195,36 @@ Fedora / RHEL / Nobara users: substitute the `.rpm` asset from the same release 
 
 ## Project Stats
 
-FloCafe's public GitHub activity is visible through live badges and GitHub Insights:
+Restaurant360's public GitHub activity is visible through live badges and GitHub Insights:
 
 | Signal | Live status |
 |--------|-------------|
-| Latest release | [![Latest release](https://img.shields.io/github/v/release/FreeOpenSourcePOS/FloCafe?label=release)](https://github.com/FreeOpenSourcePOS/FloCafe/releases/latest) |
-| Total release downloads | [![Downloads](https://img.shields.io/github/downloads/FreeOpenSourcePOS/FloCafe/total?label=release%20downloads)](https://github.com/FreeOpenSourcePOS/FloCafe/releases) |
-| Stars | [![Stars](https://img.shields.io/github/stars/FreeOpenSourcePOS/FloCafe?label=stars)](https://github.com/FreeOpenSourcePOS/FloCafe/stargazers) |
-| Forks | [![Forks](https://img.shields.io/github/forks/FreeOpenSourcePOS/FloCafe?label=forks)](https://github.com/FreeOpenSourcePOS/FloCafe/network/members) |
-| Open issues | [![Open issues](https://img.shields.io/github/issues/FreeOpenSourcePOS/FloCafe?label=open%20issues)](https://github.com/FreeOpenSourcePOS/FloCafe/issues) |
-| Open pull requests | [![Open PRs](https://img.shields.io/github/issues-pr/FreeOpenSourcePOS/FloCafe?label=open%20PRs)](https://github.com/FreeOpenSourcePOS/FloCafe/pulls) |
-| Commit activity | [![Commit activity](https://img.shields.io/github/commit-activity/m/FreeOpenSourcePOS/FloCafe?label=commits%2Fmonth)](https://github.com/FreeOpenSourcePOS/FloCafe/pulse) |
-| Last commit | [![Last commit](https://img.shields.io/github/last-commit/FreeOpenSourcePOS/FloCafe)](https://github.com/FreeOpenSourcePOS/FloCafe/commits/main) |
+| Latest release | [![Latest release](https://img.shields.io/github/v/release/FreeOpenSourcePOS/Restaurant360?label=release)](https://github.com/FreeOpenSourcePOS/Restaurant360/releases/latest) |
+| Total release downloads | [![Downloads](https://img.shields.io/github/downloads/FreeOpenSourcePOS/Restaurant360/total?label=release%20downloads)](https://github.com/FreeOpenSourcePOS/Restaurant360/releases) |
+| Stars | [![Stars](https://img.shields.io/github/stars/FreeOpenSourcePOS/Restaurant360?label=stars)](https://github.com/FreeOpenSourcePOS/Restaurant360/stargazers) |
+| Forks | [![Forks](https://img.shields.io/github/forks/FreeOpenSourcePOS/Restaurant360?label=forks)](https://github.com/FreeOpenSourcePOS/Restaurant360/network/members) |
+| Open issues | [![Open issues](https://img.shields.io/github/issues/FreeOpenSourcePOS/Restaurant360?label=open%20issues)](https://github.com/FreeOpenSourcePOS/Restaurant360/issues) |
+| Open pull requests | [![Open PRs](https://img.shields.io/github/issues-pr/FreeOpenSourcePOS/Restaurant360?label=open%20PRs)](https://github.com/FreeOpenSourcePOS/Restaurant360/pulls) |
+| Commit activity | [![Commit activity](https://img.shields.io/github/commit-activity/m/FreeOpenSourcePOS/Restaurant360?label=commits%2Fmonth)](https://github.com/FreeOpenSourcePOS/Restaurant360/pulse) |
+| Last commit | [![Last commit](https://img.shields.io/github/last-commit/FreeOpenSourcePOS/Restaurant360)](https://github.com/FreeOpenSourcePOS/Restaurant360/commits/main) |
 
-For deeper repository analytics, see [Pulse](https://github.com/FreeOpenSourcePOS/FloCafe/pulse), [Contributors](https://github.com/FreeOpenSourcePOS/FloCafe/graphs/contributors), [Traffic](https://github.com/FreeOpenSourcePOS/FloCafe/graphs/traffic), and [Community Standards](https://github.com/FreeOpenSourcePOS/FloCafe/community). GitHub traffic, clones, and referrers require repository access, so they are linked instead of embedded.
+For deeper repository analytics, see [Pulse](https://github.com/FreeOpenSourcePOS/Restaurant360/pulse), [Contributors](https://github.com/FreeOpenSourcePOS/Restaurant360/graphs/contributors), [Traffic](https://github.com/FreeOpenSourcePOS/Restaurant360/graphs/traffic), and [Community Standards](https://github.com/FreeOpenSourcePOS/Restaurant360/community). GitHub traffic, clones, and referrers require repository access, so they are linked instead of embedded.
 
 ## 🗺️ Public Roadmap
 
-FloCafe is actively evolving. This roadmap reflects the current public issue discussions as of July 28, 2026.
+Restaurant360 is actively evolving. This roadmap reflects the current public issue discussions as of July 28, 2026.
 
 ### Active Priorities
 
-- **Desktop update experience:** Add in-app auto-update support with a notification badge ([#58](https://github.com/FreeOpenSourcePOS/FloCafe/issues/58)).
-- **Loyalty program polish:** Refine loyalty onboarding and labels so staff understand earn/redeem behavior faster ([#81](https://github.com/FreeOpenSourcePOS/FloCafe/issues/81)).
-- **In-app feedback:** Let users without a GitHub account submit feedback directly from the app instead of needing to file an issue ([#141](https://github.com/FreeOpenSourcePOS/FloCafe/issues/141)).
+- **Desktop update experience:** Add in-app auto-update support with a notification badge ([#58](https://github.com/FreeOpenSourcePOS/Restaurant360/issues/58)).
+- **Loyalty program polish:** Refine loyalty onboarding and labels so staff understand earn/redeem behavior faster ([#81](https://github.com/FreeOpenSourcePOS/Restaurant360/issues/81)).
+- **In-app feedback:** Let users without a GitHub account submit feedback directly from the app instead of needing to file an issue ([#141](https://github.com/FreeOpenSourcePOS/Restaurant360/issues/141)).
 
 ### Longer-Term Direction
 
-- **Android/iOS tablet client + free e-billing:** A thin-client order-taking + billing surface for tablets on the same local network as the desktop install — same pattern KDS already uses (LAN, no install required), not an Electron port (not possible on mobile). No printer access on the tablet itself; printing routes through the existing desktop install. Bundled: how bills reach customers for free (the already-shipped `wa.me` share link today, richer automated WhatsApp messaging as a possible future step) ([#135](https://github.com/FreeOpenSourcePOS/FloCafe/issues/135)).
-- **Universal tax engine:** Move beyond India-specific GST to configurable surcharges, per-category rates/discounts, and more countries' tax rules ([#143](https://github.com/FreeOpenSourcePOS/FloCafe/issues/143)).
-- **Country & provider plugin architecture:** A plugin system for country- and payment-provider-specific behavior, so tax/provider variants don't require touching core code ([#142](https://github.com/FreeOpenSourcePOS/FloCafe/issues/142)).
+- **Android/iOS tablet client + free e-billing:** A thin-client order-taking + billing surface for tablets on the same local network as the desktop install — same pattern KDS already uses (LAN, no install required), not an Electron port (not possible on mobile). No printer access on the tablet itself; printing routes through the existing desktop install. Bundled: how bills reach customers for free (the already-shipped `wa.me` share link today, richer automated WhatsApp messaging as a possible future step) ([#135](https://github.com/FreeOpenSourcePOS/Restaurant360/issues/135)).
+- **Universal tax engine:** Move beyond India-specific GST to configurable surcharges, per-category rates/discounts, and more countries' tax rules ([#143](https://github.com/FreeOpenSourcePOS/Restaurant360/issues/143)).
+- **Country & provider plugin architecture:** A plugin system for country- and payment-provider-specific behavior, so tax/provider variants don't require touching core code ([#142](https://github.com/FreeOpenSourcePOS/Restaurant360/issues/142)).
 - **Advanced Inventory Management:** Low stock alerts, supplier purchase orders, and ingredient-level tracking.
 - **Enhanced Cloud Sync:** Opt-in multi-device synchronization across different branches or franchises.
 - **Expanded Translations (i18n):** Add more community-contributed languages beyond the native English, Spanish, and Brazilian Portuguese support.
@@ -266,7 +266,7 @@ Optional:
 
 ### 1. Download & Install
 
-Download the installer for your platform from [Releases](https://github.com/FreeOpenSourcePOS/FloCafe/releases) or the app stores above.
+Download the installer for your platform from [Releases](https://github.com/FreeOpenSourcePOS/Restaurant360/releases) or the app stores above.
 
 ### 2. First Launch
 
@@ -287,8 +287,8 @@ Use the owner email and password created during first launch.
 
 ```bash
 # Clone the repo
-git clone https://github.com/FreeOpenSourcePOS/FloCafe.git
-cd FloCafe
+git clone https://github.com/FreeOpenSourcePOS/Restaurant360.git
+cd Restaurant360
 
 # Install dependencies
 npm install
@@ -360,7 +360,7 @@ GOOGLE_DRIVE_CLIENT_SECRET=your-client-secret
 ### Project Structure
 
 ```
-FloCafe/
+Restaurant360/
 ├── main/                    # Electron main process (TypeScript)
 │   ├── index.ts            # Entry point, orchestrates everything
 │   ├── server.ts           # Express API server (:3001)
@@ -385,7 +385,7 @@ FloCafe/
 
 ## Updates & Database Integrity
 
-FloCafe auto-updates in the background on macOS and Windows (checks a few seconds after
+Restaurant360 auto-updates in the background on macOS and Windows (checks a few seconds after
 launch, downloads silently, applies on quit). This relies on `electron-updater` fetching
 a manifest (`latest-mac.yml` / `latest.yml`) from the latest GitHub release — every
 release build verifies these files exist before publishing (see
@@ -396,7 +396,7 @@ silently ship without a working update path again.
 Master PIN all live in the OS user-data directory (`app.getPath('userData')`) — a
 completely separate location from the application binary that gets replaced. This holds
 regardless of *how* you update: automatic background update, manually re-downloading and
-reinstalling from [GitHub Releases](https://github.com/FreeOpenSourcePOS/FloCafe/releases),
+reinstalling from [GitHub Releases](https://github.com/FreeOpenSourcePOS/Restaurant360/releases),
 or via the Mac App Store / Microsoft Store.
 
 **Schema migrations run automatically and safely on every startup:**

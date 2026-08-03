@@ -407,7 +407,7 @@ async function main() {
       privateKey,
     ).toString('base64');
     const releaseTag = 'tax-pack-official-in-v1.1.0';
-    const releaseBase = `https://github.com/FreeOpenSourcePOS/FloCafe/releases/download/${releaseTag}`;
+    const releaseBase = `https://github.com/FreeOpenSourcePOS/Restaurant360/releases/download/${releaseTag}`;
     const catalogEntry = {
       id: downloadedPack.id,
       publisher: downloadedPack.publisher,
@@ -486,7 +486,7 @@ async function main() {
       privateKey,
     ).toString('base64');
     const newCountryTag = 'tax-pack-brand-new-country-pack-v1.0.0';
-    const newCountryBase = `https://github.com/FreeOpenSourcePOS/FloCafe/releases/download/${newCountryTag}`;
+    const newCountryBase = `https://github.com/FreeOpenSourcePOS/Restaurant360/releases/download/${newCountryTag}`;
     const newCountryEntry = {
       id: newCountryPack.id,
       publisher: newCountryPack.publisher,
@@ -530,8 +530,8 @@ async function main() {
       ...catalogEntry,
       version: incompatiblePack.version,
       minFloVersion: incompatiblePack.minFloVersion,
-      downloadUrl: `https://github.com/FreeOpenSourcePOS/FloCafe/releases/download/${incompatibleTag}/official-in-v1.2.0.json`,
-      signatureUrl: `https://github.com/FreeOpenSourcePOS/FloCafe/releases/download/${incompatibleTag}/official-in-v1.2.0.json.sig`,
+      downloadUrl: `https://github.com/FreeOpenSourcePOS/Restaurant360/releases/download/${incompatibleTag}/official-in-v1.2.0.json`,
+      signatureUrl: `https://github.com/FreeOpenSourcePOS/Restaurant360/releases/download/${incompatibleTag}/official-in-v1.2.0.json.sig`,
       digest: taxPackSha256(incompatiblePackJson),
     };
     const incompatibleFetch = async (input: string | URL | Request) => new Response(

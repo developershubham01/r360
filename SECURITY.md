@@ -2,11 +2,11 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in FloCafe, please report it responsibly. **Do not open a public GitHub issue for security vulnerabilities.**
+If you discover a security vulnerability in Restaurant360, please report it responsibly. **Do not open a public GitHub issue for security vulnerabilities.**
 
 ### How to Report
 
-Email **support@flopos.com** (or open a private vulnerability report via [GitHub's advisory feature](https://github.com/FreeOpenSourcePOS/FloCafe/security/advisories/new)).
+Email **support@flopos.com** (or open a private vulnerability report via [GitHub's advisory feature](https://github.com/FreeOpenSourcePOS/Restaurant360/security/advisories/new)).
 
 Include:
 - Description of the vulnerability
@@ -22,7 +22,7 @@ Include:
 
 ## Scope
 
-FloCafe handles:
+Restaurant360 handles:
 - User authentication (JWT tokens, bcrypt password hashing)
 - Payment processing (bill generation, tax calculations)
 - Local data storage (SQLite database)
@@ -42,4 +42,4 @@ All of these are in scope for security reports.
 - Change the default admin credentials (`admin@flo.local` / `admin123`) immediately after first run
 - Set a strong `JWT_SECRET` in your `.env` file (or let the app generate one on first launch)
 - Keep the application updated to the latest version
-- FloCafe runs locally — do not expose port 3001 (API) or 3002 (dev) to the public internet
+- Restaurant360 runs locally — do not expose port 3001 (API) or 3002 (dev) to the public internet

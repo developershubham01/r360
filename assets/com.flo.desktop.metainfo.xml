@@ -27,14 +27,14 @@
     </ul>
   </description>
 
-  <launchable type="desktop-id">flocafe.desktop</launchable>
+  <launchable type="desktop-id">restaurant360.desktop</launchable>
 
-  <url type="homepage">https://github.com/FreeOpenSourcePOS/FloCafe</url>
-  <url type="bugtracker">https://github.com/FreeOpenSourcePOS/FloCafe/issues</url>
+  <url type="homepage">https://github.com/FreeOpenSourcePOS/Restaurant360</url>
+  <url type="bugtracker">https://github.com/FreeOpenSourcePOS/Restaurant360/issues</url>
 
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/FreeOpenSourcePOS/FloCafe/main/screenshot.png</image>
+      <image>https://raw.githubusercontent.com/FreeOpenSourcePOS/Restaurant360/main/screenshot.png</image>
       <caption>Point of Sale interface</caption>
     </screenshot>
   </screenshots>

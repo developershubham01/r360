@@ -27,16 +27,16 @@ const isLinux = os.platform() === 'linux';
 // These patterns match the process command line on all platforms.
 // In dev: `electron .` with app.name = 'flo-desktop'
 // Packaged:
-//   - Linux: executableName "flocafe" (snap/AppImage/deb binary path)
+//   - Linux: executableName "restaurant360" (snap/AppImage/deb binary path)
 //   - Mac/Windows: productName "Flo Cafe"
 const FLO_PATTERNS = [
-  /(?:^|[\s\\/])flocafe(?:\.exe)?(?:$|\s)/i,
+  /(?:^|[\s\\/])restaurant360(?:\.exe)?(?:$|\s)/i,
   /(?:^|[\s\\/])Flo[\s_\-]*Cafe(?:\.exe)?(?:$|\s)/i,
   /(?:^|[\s\\/])Flo Cafe\.app(?:[\\/]Contents[\\/]MacOS[\\/]Flo Cafe)?(?:$|\s)/i,
   /(?:^|\s)com\.flo\.desktop(?:\.\S*)?(?:$|\s)/i,
   /(?:^|\s)flo[_\-]?pos(?:-service)?(?:\.exe)?(?:$|\s)/i,
   /(?:^|\s)electron(?:\s+\S+)*\s+--appName=flo[_\-]?desktop(?:$|\s)/i,
-  /(?:^|\s)(?:node|nodejs)(?:\s+\S+)*[\\/]FloCafe[\\/](?:dev-server\.js|dist[\\/]index\.js)(?:$|\s)/i,
+  /(?:^|\s)(?:node|nodejs)(?:\s+\S+)*[\\/]Restaurant360[\\/](?:dev-server\.js|dist[\\/]index\.js)(?:$|\s)/i,
 ];
 
 function isFloProcess(cmdline) {

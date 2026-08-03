@@ -58,8 +58,8 @@ body:
   - type: input
     id: version
     attributes:
-      label: FloCafe version
-      description: "Find this in the app menu: FloCafe > About"
+      label: Restaurant360 version
+      description: "Find this in the app menu: Restaurant360 > About"
       placeholder: "e.g. 1.7.2"
     validations:
       required: true

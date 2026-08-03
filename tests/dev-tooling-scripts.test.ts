@@ -13,12 +13,12 @@ function runTest() {
 
   // Positive cases (should match as Flo processes)
   const positiveCases = [
-    'node /Users/dev/FloCafe/dist/index.js',
+    'node /Users/dev/Restaurant360/dist/index.js',
     '/Applications/Flo Cafe.app/Contents/MacOS/Flo Cafe',
-    '/usr/bin/flocafe --no-sandbox',
+    '/usr/bin/restaurant360 --no-sandbox',
     'electron . --appName=flo-desktop',
-    'node /path/to/FloCafe/dev-server.js',
-    'node /path/to/FloCafe/dist/index.js',
+    'node /path/to/Restaurant360/dev-server.js',
+    'node /path/to/Restaurant360/dist/index.js',
     'com.flo.desktop.helper',
     'flo-pos-service',
   ];
@@ -37,8 +37,8 @@ function runTest() {
     'node /Users/other-project/dist/index.js',
     'node /Users/other-project/dev-server.js',
     'node /home/user/app/dev-server.js',
-    'node /Users/dev/FloCafe/other-server.js',
-    'node /Users/dev/FloCafe-tools/dev-server.js',
+    'node /Users/dev/Restaurant360/other-server.js',
+    'node /Users/dev/Restaurant360-tools/dev-server.js',
     'python3 -m http.server 3000',
     'nginx: master process',
     'postgres -D /data',

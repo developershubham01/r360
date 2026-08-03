@@ -19,7 +19,7 @@
 
 .EXAMPLE
   Download and run directly, no need to clone the repo:
-    irm https://github.com/FreeOpenSourcePOS/FloCafe/releases/latest/download/uninstall-windows.ps1 -OutFile uninstall-windows.ps1
+    irm https://github.com/FreeOpenSourcePOS/Restaurant360/releases/latest/download/uninstall-windows.ps1 -OutFile uninstall-windows.ps1
     powershell -ExecutionPolicy Bypass -File .\uninstall-windows.ps1
 
 .EXAMPLE

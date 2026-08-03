@@ -11,7 +11,7 @@ This documents what a Flo Cafe release is supposed to produce — the artifact m
 |---|---|---|---|
 | **macOS** | `.dmg`, `.zip` | Intel (x64), Apple Silicon (arm64) | Code-signed (Developer ID Application) and notarized. `.zip` + `latest-mac.yml` are required for auto-update (electron-updater's `MacUpdater` fetches those, not the DMG). |
 | **Windows** | `.exe` (NSIS installer) | x64 | Installer only — **no portable build**. `latest.yml` + the installer's `.blockmap` are required for auto-update. |
-| **Linux** | `AppImage`, `.deb`, `.rpm`, snap | x64, arm64 | `.deb`/AppImage cover Ubuntu directly. Snap is published to the Snap Store under `flocafe`. |
+| **Linux** | `AppImage`, `.deb`, `.rpm`, snap | x64, arm64 | `.deb`/AppImage cover Ubuntu directly. Snap is published to the Snap Store under `restaurant360`. |
 
 Every release ships **both architectures for macOS and Linux**. Windows is x64-only (no arm64 Windows target is configured, and there is no ARM64 Windows userbase to justify one yet).
 
@@ -47,9 +47,9 @@ For each `v*` tag, the release should have exactly:
 - `flo-desktop-<version>-x64.dmg`, `-arm64.dmg`
 - `flo-desktop-<version>-x64.zip`, `-arm64.zip`, `latest-mac.yml`, matching `.zip.blockmap` files
 - `Flo Cafe Setup <version>.exe`, `latest.yml`, matching `.exe.blockmap`
-- `flocafe-<version>-x86_64.AppImage`, `-arm64.AppImage`
-- `flocafe-<version>-amd64.deb`, `-arm64.deb`
-- `flocafe-<version>-x86_64.rpm`, `-arm64.rpm`
-- A `flocafe` snap revision published under both `amd64` and `arm64` on the Snap Store `stable` channel
+- `restaurant360-<version>-x86_64.AppImage`, `-arm64.AppImage`
+- `restaurant360-<version>-amd64.deb`, `-arm64.deb`
+- `restaurant360-<version>-x86_64.rpm`, `-arm64.rpm`
+- A `restaurant360` snap revision published under both `amd64` and `arm64` on the Snap Store `stable` channel
 
 If any of the above is missing, check the corresponding `release-mac` / `release-windows` / `release-linux` job in Actions before assuming the release is good.

@@ -1,5 +1,5 @@
 /**
- * Outbound-only cloud bridge for FloCafe POS.
+ * Outbound-only cloud bridge for Restaurant360 POS.
  *
  * The POS never opens a public listener. It registers with Blue over HTTPS,
  * pushes local events to an outbox endpoint, and polls a signed command queue

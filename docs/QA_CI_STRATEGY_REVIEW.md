@@ -1,4 +1,4 @@
-# FloCafe Whole-App CI/CD and QA Strategy
+# Restaurant360 Whole-App CI/CD and QA Strategy
 *Date: July 2026*
 *Context: Transitioning from a KDS-focused regression response to a whole-app tiered safety net.*
 

@@ -34,7 +34,7 @@ export async function sendEvent(eventType: string, payload?: Record<string, unkn
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         anon_id: anonId,
-        app: 'flocafe',
+        app: 'restaurant360',
         app_version: app.getVersion(),
         event_type: eventType,
         platform: process.platform,

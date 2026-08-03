@@ -38,7 +38,7 @@ import { getDatabase, now, createBackup } from '../db';
 type OAuth2Client = InstanceType<typeof google.auth.OAuth2>;
 
 export const DRIVE_FILE_SCOPE = 'https://www.googleapis.com/auth/drive.file';
-export const DRIVE_BACKUP_FOLDER_NAME = 'FloCafe Backups';
+export const DRIVE_BACKUP_FOLDER_NAME = 'Restaurant360 Backups';
 
 const DEFAULT_RETENTION = 10;
 const MIN_RETENTION = 1;
@@ -209,7 +209,7 @@ class GoogleDriveService {
     if (!tokens.refresh_token) {
       // Google only issues a refresh_token on first consent (or with prompt=consent,
       // which we always pass) — without it we can't run unattended scheduled backups.
-      throw new Error('Google did not return a refresh token. Revoke FloCafe access at myaccount.google.com/permissions and try connecting again.');
+      throw new Error('Google did not return a refresh token. Revoke Restaurant360 access at myaccount.google.com/permissions and try connecting again.');
     }
     this.writeTokens(tokens);
 

@@ -527,7 +527,7 @@ export function TaxConfigurationPanel({ isOwner }: { isOwner: boolean }) {
               <div>
                 <h3 className="font-semibold text-gray-900">Available tax packs</h3>
                 <p className="text-sm text-gray-500">
-                  Downloads are verified with the built-in FloCafe signing key before installation.
+                  Downloads are verified with the built-in Restaurant360 signing key before installation.
                 </p>
               </div>
             </div>
@@ -547,7 +547,7 @@ export function TaxConfigurationPanel({ isOwner }: { isOwner: boolean }) {
                       {entry.country === '*' ? 'Generic' : entry.country}
                       {' · '}{entry.publisher}
                       {' · '}Published {entry.publishedAt}
-                      {' · '}Requires FloCafe {entry.minFloVersion}+
+                      {' · '}Requires Restaurant360 {entry.minFloVersion}+
                     </p>
                   </div>
                   <Button

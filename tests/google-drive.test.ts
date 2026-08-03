@@ -49,7 +49,7 @@ Module._load = function (request: string, parent: unknown, isMain: boolean) {
 const { initDatabase, closeDatabase } = require('../main/db');
 
 function main() {
-  console.log('🧪 FloCafe Google Drive Tests');
+  console.log('🧪 Restaurant360 Google Drive Tests');
   console.log('='.repeat(60));
 
   // ── isGoogleDriveConfigured() ────────────────────────────────────────

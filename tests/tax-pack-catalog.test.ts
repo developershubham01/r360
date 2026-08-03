@@ -16,7 +16,7 @@ import {
 import indiaPack from '../main/tax-packs/in.json';
 
 const releaseTag = 'tax-pack-official-in-v1.1.0';
-const releaseBase = `https://github.com/FreeOpenSourcePOS/FloCafe/releases/download/${releaseTag}`;
+const releaseBase = `https://github.com/FreeOpenSourcePOS/Restaurant360/releases/download/${releaseTag}`;
 
 function response(value: string, status = 200): Response {
   return new Response(value, {
@@ -59,11 +59,11 @@ test('catalog discovery finds the newest tax-pack release and verifies its detac
   const catalogUrl = `${releaseBase}/catalog.json`;
   const fetchImpl: typeof fetch = async (input) => {
     const url = String(input);
-    if (url.startsWith('https://api.github.com/repos/FreeOpenSourcePOS/FloCafe/releases')) {
+    if (url.startsWith('https://api.github.com/repos/FreeOpenSourcePOS/Restaurant360/releases')) {
       return response(JSON.stringify([
         {
           tag_name: releaseTag,
-          html_url: `https://github.com/FreeOpenSourcePOS/FloCafe/releases/tag/${releaseTag}`,
+          html_url: `https://github.com/FreeOpenSourcePOS/Restaurant360/releases/tag/${releaseTag}`,
           draft: false,
           assets: [{ name: 'catalog.json', browser_download_url: catalogUrl }],
         },
@@ -136,8 +136,8 @@ test('release builder signs exact pack bytes and preserves other catalog entries
       version: '1.0.0',
       publishedAt: '2026-01-01',
       minFloVersion: '2.4.0',
-      downloadUrl: 'https://github.com/FreeOpenSourcePOS/FloCafe/releases/download/tax-pack-official-th-v1.0.0/official-th-v1.0.0.json',
-      signatureUrl: 'https://github.com/FreeOpenSourcePOS/FloCafe/releases/download/tax-pack-official-th-v1.0.0/official-th-v1.0.0.json.sig',
+      downloadUrl: 'https://github.com/FreeOpenSourcePOS/Restaurant360/releases/download/tax-pack-official-th-v1.0.0/official-th-v1.0.0.json',
+      signatureUrl: 'https://github.com/FreeOpenSourcePOS/Restaurant360/releases/download/tax-pack-official-th-v1.0.0/official-th-v1.0.0.json.sig',
       digest: '0'.repeat(64),
     }],
   }));

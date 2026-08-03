@@ -8,7 +8,7 @@
 # leave it out to keep it.
 #
 # Download and run directly, no need to clone the repo:
-#   curl -fsSL https://github.com/FreeOpenSourcePOS/FloCafe/releases/latest/download/uninstall-macos.sh -o uninstall-macos.sh
+#   curl -fsSL https://github.com/FreeOpenSourcePOS/Restaurant360/releases/latest/download/uninstall-macos.sh -o uninstall-macos.sh
 #   chmod +x uninstall-macos.sh
 #   ./uninstall-macos.sh
 #

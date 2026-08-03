@@ -6,7 +6,7 @@ cd "$SCRIPT_DIR"
 
 echo "Flo POS - restarting development app"
 
-# kill-ports.js scopes termination to FloCafe listeners; do not kill by generic
+# kill-ports.js scopes termination to Restaurant360 listeners; do not kill by generic
 # process names such as electron, next, or node.
 node kill-ports.js 3000 3001 3002 3088
 

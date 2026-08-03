@@ -2,8 +2,8 @@ import { createHash, verify, type KeyLike } from 'crypto';
 import type { CountryPack } from './types';
 import { TRUSTED_TAX_PACK_SIGNING_PUBLIC_KEY } from './trusted-signing-key';
 
-const RELEASES_API_URL = 'https://api.github.com/repos/FreeOpenSourcePOS/FloCafe/releases';
-const RELEASE_DOWNLOAD_PATH_PREFIX = '/FreeOpenSourcePOS/FloCafe/releases/download/';
+const RELEASES_API_URL = 'https://api.github.com/repos/FreeOpenSourcePOS/Restaurant360/releases';
+const RELEASE_DOWNLOAD_PATH_PREFIX = '/FreeOpenSourcePOS/Restaurant360/releases/download/';
 const REQUEST_TIMEOUT_MS = 15_000;
 const MAX_RELEASE_PAGES = 10;
 const MAX_CATALOG_BYTES = 1_000_000;
@@ -113,7 +113,7 @@ async function fetchText(
 ): Promise<string> {
   const response = await fetchImpl(url, {
     headers: {
-      'User-Agent': 'FloCafe-Tax-Pack-Manager',
+      'User-Agent': 'Restaurant360-Tax-Pack-Manager',
       Accept: 'application/json',
       ...headers,
     },

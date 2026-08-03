@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
 if [ ! -f "$SCRIPT_DIR/package.json" ]; then
-  echo "Error: nuclear-reset.sh must run from a FloCafe checkout." >&2
+  echo "Error: nuclear-reset.sh must run from a Restaurant360 checkout." >&2
   exit 1
 fi
 

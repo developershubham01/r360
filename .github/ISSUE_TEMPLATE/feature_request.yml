@@ -33,7 +33,7 @@ body:
     id: area
     attributes:
       label: Area
-      description: Which part of FloCafe does this affect?
+      description: Which part of Restaurant360 does this affect?
       options:
         - POS / Checkout
         - Table Management

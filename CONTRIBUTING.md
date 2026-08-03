@@ -1,4 +1,4 @@
-# Contributing to FloCafe
+# Contributing to Restaurant360
 
 Thanks for your interest in contributing! This guide covers everything you need to get started.
 
@@ -12,8 +12,8 @@ Thanks for your interest in contributing! This guide covers everything you need 
 
 ```bash
 # Clone the repo
-git clone https://github.com/FreeOpenSourcePOS/FloCafe.git
-cd FloCafe
+git clone https://github.com/FreeOpenSourcePOS/Restaurant360.git
+cd Restaurant360
 
 # Install dependencies (rebuilds native modules)
 npm install
@@ -93,7 +93,7 @@ you download the `.p8` once, so save it before navigating away.
 ## Project Structure
 
 ```
-FloCafe/
+Restaurant360/
 ├── main/              # Electron main process + Express API
 │   ├── routes/        # API route handlers
 │   ├── db.ts          # SQLite database + migrations
@@ -191,8 +191,8 @@ We actively welcome community contributions for new language translations! To ad
 
 ## Getting Help
 
-- Open a [Discussion](https://github.com/FreeOpenSourcePOS/FloCafe/discussions) for questions
-- Check existing [Issues](https://github.com/FreeOpenSourcePOS/FloCafe/issues) before creating new ones
+- Open a [Discussion](https://github.com/FreeOpenSourcePOS/Restaurant360/discussions) for questions
+- Check existing [Issues](https://github.com/FreeOpenSourcePOS/Restaurant360/issues) before creating new ones
 - Look for issues labeled `good first issue` for beginner-friendly tasks
 
 ## Code of Conduct

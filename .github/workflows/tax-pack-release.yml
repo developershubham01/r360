@@ -30,12 +30,12 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p "$RUNNER_TEMP/tax-pack-previous"
-          LATEST_TAG="$(gh api --paginate "repos/FreeOpenSourcePOS/FloCafe/releases?per_page=100" \
+          LATEST_TAG="$(gh api --paginate "repos/FreeOpenSourcePOS/Restaurant360/releases?per_page=100" \
             --jq '.[] | select(.draft == false) | select(.tag_name | test("^tax-pack-[a-z0-9][a-z0-9-]*-v[0-9]+\\.[0-9]+\\.[0-9]+$")) | .tag_name' \
             | sed -n '1p')"
           if [ -n "$LATEST_TAG" ]; then
             gh release download "$LATEST_TAG" \
-              --repo FreeOpenSourcePOS/FloCafe \
+              --repo FreeOpenSourcePOS/Restaurant360 \
               --pattern catalog.json \
               --dir "$RUNNER_TEMP/tax-pack-previous"
             echo "path=$RUNNER_TEMP/tax-pack-previous/catalog.json" >> "$GITHUB_OUTPUT"
@@ -58,6 +58,6 @@ jobs:
         run: |
           gh release create "$GITHUB_REF_NAME" \
             "$RUNNER_TEMP"/tax-pack-release/* \
-            --repo FreeOpenSourcePOS/FloCafe \
+            --repo FreeOpenSourcePOS/Restaurant360 \
             --title "$GITHUB_REF_NAME" \
-            --notes "Signed FloCafe country-pack release. Activation remains an explicit owner action in the app."
+            --notes "Signed Restaurant360 country-pack release. Activation remains an explicit owner action in the app."
