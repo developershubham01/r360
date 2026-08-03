@@ -16,13 +16,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Flo",
+  title: "Restaurant360",
   description: "Smart Point of Sale for restaurants",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "Flo",
+    title: "Restaurant360",
   },
   icons: {
     icon: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#3248FF",
+  themeColor: "#f97316",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,

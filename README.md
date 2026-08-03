@@ -1,32 +1,24 @@
-<h1 align="center">FloCafe</h1>
+<h1 align="center">Restaurant360</h1>
 
 <p align="center">
   <strong>Free, open-source, offline-first Point of Sale for cafes, restaurants, and food businesses.</strong>
 </p>
 
 <p align="center">
-  <a href="https://flopos.com"><img src="https://img.shields.io/badge/website-flopos.com-2ea44f" alt="Website"></a>
-  <a href="https://github.com/FreeOpenSourcePOS/FloCafe/releases"><img src="https://img.shields.io/github/v/release/FreeOpenSourcePOS/FloCafe" alt="GitHub release"></a>
-  <a href="https://github.com/FreeOpenSourcePOS/FloCafe/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
+  <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License">
   <img src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-blue" alt="Platform">
   <img src="https://img.shields.io/badge/Node-%3E%3D22.0.0-brightgreen" alt="Node.js">
-  <br>
-  <a href="https://github.com/FreeOpenSourcePOS/FloCafe/stargazers"><img src="https://img.shields.io/github/stars/FreeOpenSourcePOS/FloCafe?style=social" alt="GitHub stars"></a>
-  <a href="https://github.com/FreeOpenSourcePOS/FloCafe/network/members"><img src="https://img.shields.io/github/forks/FreeOpenSourcePOS/FloCafe?style=social" alt="GitHub forks"></a>
-  <a href="https://github.com/FreeOpenSourcePOS/FloCafe/issues"><img src="https://img.shields.io/github/issues/FreeOpenSourcePOS/FloCafe" alt="Open issues"></a>
-  <a href="https://github.com/FreeOpenSourcePOS/FloCafe/pulls"><img src="https://img.shields.io/github/issues-pr/FreeOpenSourcePOS/FloCafe" alt="Open pull requests"></a>
-  <a href="https://www.reddit.com/r/FloPOS/"><img src="https://img.shields.io/badge/Reddit-r%2FFloPOS-FF4500?logo=reddit&logoColor=white" alt="Reddit community"></a>
 </p>
 
 ---
 
-FloCafe runs entirely on your own machine — no internet, no subscriptions, no cloud dependency. Your data stays local, your business stays private.
+Restaurant360 runs entirely on your own machine — no internet, no subscriptions, no cloud dependency. Your data stays local, your business stays private.
 
-**FloCafe is free.** Every feature, in every app across the ecosystem — FloCafe, FloRetail, FloSalon, and RevFlo (our companion mobile reporting app, short for *Revenue Flow*) — has no tiers, no subscriptions, and no paywalled features.
+**Restaurant360 is free.** Every feature, across the desktop and kitchen display systems, has no tiers, no subscriptions, and no paywalled features.
 
 ## Table of Contents
 
-- [Why FloCafe](#why-flocafe)
+- [Why Restaurant360](#why-restaurant360)
 - [Downloads](#downloads)
 - [Install on Linux](#install-on-linux)
 - [Features](#features)
@@ -503,3 +495,4 @@ This project is open source under the [MIT License](LICENSE).
   <strong>Bringing professional POS software to every cafe and restaurant.</strong><br>
   <sub>⭐ Star us on GitHub if you find this useful!</sub>
 </p>
+# r360 

@@ -57,7 +57,7 @@ export function getDbHealth(): { ok: boolean; error?: string } {
 
 export function getDbPath(): string {
   const userDataPath = app.isPackaged ? app.getPath('userData') : path.join(__dirname, '../');
-  return path.join(userDataPath, 'flo.db');
+  return path.join(userDataPath, 'restaurant360.db');
 }
 
 function getBackupDir(): string {
